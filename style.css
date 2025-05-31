@@ -1,0 +1,383 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fefefe;
+    overflow-x: hidden;
+}
+
+/* Universal Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header Styles */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+header h1 i {
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+#hero {
+  background: linear-gradient(to right, #fbd3e9, #b1deca);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#hero h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+#hero p {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #333;
+}
+
+/* Menu Section */
+#menu {
+  background: linear-gradient(to right, #c9ffbf, #ffafbd);
+  padding: 40px 20px;
+}
+
+#menu h2 {
+  font-size: 32px;
+  text-align: center;
+  color: #4b3b3b;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.card ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.card li {
+  background-color: #fff6f6;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card li:hover {
+  transform: scale(1.05);
+  background-color: #f1e3d3;
+}
+
+.card li i {
+  margin-right: 6px;
+  color: #f4a261;
+}
+
+/* About Section */
+#about {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  padding: 40px 20px;
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#about img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#about p {
+  font-size: 18px;
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+}
+
+/* Contact Section */
+#contact {
+  background: linear-gradient(to right, #d4fc79, #96e6a1);
+  padding: 40px 20px;
+}
+
+#contact h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: auto;
+}
+
+#contact input,
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#contact button {
+  display: block;
+  margin: 0 auto;
+  background-color: #f4a261;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+}
+#contact form div{
+    margin-bottom: 15px;
+}
+
+#contact button:hover {
+  background-color: #2a9d8f;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 16px;
+}
+
+footer a {
+  color: #f4a261;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ======================= */
+/* 📱 Media Queries Mobile */
+/* ======================= */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 10px;
+  }
+
+ #hero h2 {
+  font-size: clamp(24px, 5vw, 36px);
+}
+
+  #hero p {
+    font-size: 16px;
+  }
+
+  #hero img {
+    height: 250px;
+  }
+
+  #menu h2,
+  #about h2,
+  #contact h2 {
+    font-size: 24px;
+  }
+
+  .card ul {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  #about img {
+    height: 200px;
+  }
+
+  #about p {
+    font-size: 16px;
+  }
+
+  #contact input,
+  textarea {
+    font-size: 14px;
+  }
+
+  #contact button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  #hero h2 {
+    font-size: 24px;
+  }
+
+  #hero p {
+    font-size: 14px;
+  }
+
+  #menu h2,
+  #about h2,
+  #contact h2 {
+    font-size: 20px;
+  }
+
+  .card li {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #contact input,
+  textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+@media (max-width: 360px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  #hero h2 {
+    font-size: 20px;
+  }
+
+  #hero p {
+    font-size: 12px;
+  }
+
+  #menu h2,
+  #about h2,
+  #contact h2 {
+    font-size: 18px;
+  }
+
+  .card li {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+@media (max-width: 280px) {
+  .card li {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .card ul{
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
